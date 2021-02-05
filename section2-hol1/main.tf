@@ -1,4 +1,6 @@
-provider "kubernetes" {}
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
 
 resource "kubernetes_deployment" "tf-k8s-deployment" {
   metadata {
